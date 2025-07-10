@@ -1,0 +1,22 @@
+{
+  "name": "arc-auth-express-example",
+  "version": "1.0.0",
+  "description": "Express.js example using arc-auth",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@arc-auth/core": "workspace:*",
+    "@arc-auth/jwt": "workspace:*",
+    "express": "^4.18.0",
+    "drizzle-orm": "^0.29.0",
+    "postgres": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/node": "^20.10.0"
+  }
+}

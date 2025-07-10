@@ -1,0 +1,92 @@
+{
+  "name": "arc-auth",
+  "version": "1.0.0",
+  "description": "Modern, plugin-based authentication provider for APIs",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./plugins": {
+      "types": "./dist/plugins/index.d.ts",
+      "import": "./dist/plugins/index.js"
+    },
+    "./plugins/jwt": {
+      "types": "./dist/plugins/jwt.d.ts",
+      "import": "./dist/plugins/jwt.js"
+    },
+    "./plugins/sessions": {
+      "types": "./dist/plugins/sessions.d.ts",
+      "import": "./dist/plugins/sessions.js"
+    },
+    "./plugins/oauth": {
+      "types": "./dist/plugins/oauth.d.ts",
+      "import": "./dist/plugins/oauth.js"
+    },
+    "./plugins/two-factor": {
+      "types": "./dist/plugins/two-factor.d.ts",
+      "import": "./dist/plugins/two-factor.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format .",
+    "format:fix": "biome format --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.29.0",
+    "argon2": "^0.31.0",
+    "jose": "^5.1.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.0",
+    "@changesets/cli": "^2.27.1",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0",
+    "tsup": "^8.0.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "keywords": [
+    "authentication",
+    "auth",
+    "jwt",
+    "argon2",
+    "jose",
+    "security",
+    "api",
+    "functional",
+    "plugins",
+    "drizzle",
+    "typescript",
+    "better-auth",
+    "single-module"
+  ],
+  "author": "Arc Auth Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/arc-auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/arc-auth/issues"
+  },
+  "homepage": "https://github.com/yourusername/arc-auth#readme"
+}
